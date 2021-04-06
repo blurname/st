@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "SauceCodePro Nerd Font:pixelsize=12:antialias=true:autohint=true";
+static char *font = "SauceCodePro Nerd Font:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -99,30 +99,31 @@ float alpha = 0.8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#3b4252", /* black   */
+	"#bf616a", /* red     */
+	"#a3be8c", /* green   */
+	"#ebcb8b", /* yellow  */
+	"#81a1c1", /* blue    */
+	"#b48ead", /* magenta */
+	"#88c0d0", /* cyan    */
+	"#e5e9f0", /* white   */
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#4c566a", /* black   */
+	"#bf616a", /* red     */
+	"#a3be8c", /* green   */
+	"#ebcb8b", /* yellow  */
+	"#81a1c1", /* blue    */
+	"#b48ead", /* magenta */
+	"#8fbcbb", /* cyan    */
+	"#eceff4", /* white   */
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+
+	"#000000", /* background */
+	"#d8dee9", /* foreground */
 	"black",
 };
 
@@ -131,10 +132,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 258;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
@@ -143,7 +144,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 6;
 
 /*
  * Default columns and rows numbers
